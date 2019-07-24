@@ -1,5 +1,6 @@
 //Practical assignment 1
 //Shared counter object
+import java.util.concurrent.locks.ReentrantLock;
 
 class Counter {
 	
@@ -10,8 +11,12 @@ class Counter {
 	}
 	
 	int getAndIncrement() {
-		synchronized(this){
+		ReentrantLock myLock = new ReentrantLock(); 
+		myLock.lock();
+		try {
 			return value++;
+		} finally {
+			myLock.unlock();
 		}
 	}
 }
