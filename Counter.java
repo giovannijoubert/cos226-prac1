@@ -10,6 +10,8 @@ class Counter {
 	}
 	
 	int getAndIncrement() {
-		return value++;
+		synchronized(this){
+			return value++;
+		}
 	}
 }
