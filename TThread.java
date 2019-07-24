@@ -3,6 +3,14 @@
 
 class TThread extends Thread {
 	public void run() {
-		System.out.println("Thread is running...");
+		for (int i = 0; i < 4; i++) {
+		try {
+			sleep(400);
+		} catch (Exception e) {
+			//totally handling it
+		}
+		int val = ThreadCounterDemo.C.getAndIncrement();
+		System.out.println(getName() + " " + val);
+		}
 	}
 }

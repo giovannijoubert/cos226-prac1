@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ThreadCounterDemo",
+            "request": "launch",
+            "mainClass": "ThreadCounterDemo"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ThreadDemo",
+            "request": "launch",
+            "mainClass": "ThreadDemo"
+        }
+    ]
+}
